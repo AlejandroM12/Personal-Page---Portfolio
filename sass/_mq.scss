@@ -1,0 +1,22 @@
+@import 'utils';
+
+$breakpoints: (
+    sm: 540px,
+    md: 768px,
+    lg: 996px,
+    xlg: 1060px,
+    xxlg: 1280px,
+);
+
+@mixin media-up($breakpoint){
+    @media screen and (max-width: map-get($breakpoints, $breakpoint)){
+        @content;
+        
+    }
+}
+@mixin media-off($breakpoint){
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)){
+        @content;
+        
+    }
+}

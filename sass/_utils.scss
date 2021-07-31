@@ -1,0 +1,42 @@
+
+$primary-color: #04009A;
+$blanco: #ffffff;
+$negro: #000000;
+$gris: #777777;
+$grisClaro: #d6d6d6;
+$linearG: linear-gradient(to right, #9290d5, #fff);
+$tipografia: Roboto,Helvetica,Arial,sans-serif;
+$tipografiaH: Hind,sans-serif;
+$unit: 8px;
+
+@function size($value){
+    @return $value * $unit;
+}
+@mixin border {
+    border: 1px solid $primary-color;
+	border-radius: 8px;
+}
+@mixin reset-pm {
+    padding: 0;
+    margin: 0;
+}
+@mixin reset-m {
+    margin: 0 auto;
+}
+@mixin reset-h{
+    text-align: center;
+	margin-top: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+}
+@mixin font-line{
+    font-weight: bold;
+	line-height: 1.618;
+}
+@mixin displayCenter{
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}

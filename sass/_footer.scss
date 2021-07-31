@@ -1,0 +1,74 @@
+@import 'utils';
+@import 'mq';
+//*Footer*/
+footer {
+	text-align: center;
+	margin: 40px auto;
+	@include border();
+	font-size: size(2);
+	max-width: 1024px;
+	width: 90%;
+	background: $linearG;
+	color: $negro;
+	ul {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin: 40px auto;
+		max-width: 1024px;
+		width: 90%;
+		li {
+			font-size: size(2);
+			margin-left: 25px;
+			a {
+				color: $negro;
+				font-weight: bold;
+				text-transform: uppercase;
+				&:hover {
+					color: $primary-color;
+				}
+				p {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+a {
+	text-decoration: none;
+}
+ul {
+	a {
+		color: $negro;
+	}
+}
+.copyright {
+	display: inline;
+	font-size: size(2);
+	font-weight: bold;
+	color: $primary-color;
+}
+@include media-up(lg) {
+	footer {
+		ul {
+			justify-content: center;
+			flex-direction: column;
+			padding-left: 0;
+			li {
+				&:first-child {
+					margin-left: 0px;
+				}
+				margin-left: 0;
+			}
+		}
+	}
+}
+@include media-up(lg){
+	footer {
+		ul {
+			justify-content: center;
+			flex-direction: column;
+			padding-left: 0;
+		}
+	}
+}

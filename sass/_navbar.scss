@@ -1,0 +1,63 @@
+@import 'utils';
+@import 'mq';
+/* MENU DE NAVEGACIÓN */
+.navbar-light {
+	.navbar-toggler {
+		border-color: rgba(0, 0, 0, 0);
+		border: none;
+	}
+	.navbar-nav {
+		.nav-link {
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}
+.navbar-toggler {
+	&:focus {
+		box-shadow: none;
+	}
+}
+.nav-link {
+	&:focus {
+		color: $primary-color;
+	}
+}
+.navbar {
+	padding-top: 0;
+	padding-bottom: 0;
+	li {
+		@include reset-m();
+		font-family: $tipografia;
+		padding: 10px;
+		list-style: none;
+		text-transform: uppercase;
+		font-size: size(2);
+		font-weight: bold;
+	}
+	>.container {
+		justify-content: space-around;
+	}
+	>.container-fluid {
+		justify-content: space-around;
+	}
+	>.container-lg {
+		justify-content: space-around;
+	}
+	>.container-md {
+		justify-content: space-around;
+	}
+	>.container-sm {
+		justify-content: space-around;
+	}
+	>.container-xl {
+		justify-content: space-around;
+	}
+	>.container-xxl {
+		justify-content: space-around;
+	}
+}
+@include media-off(lg){
+	.navbar-expand-lg .navbar-collapse {
+	  width: auto; } }
