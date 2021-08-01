@@ -527,6 +527,7 @@ h3 {
 }
 .servicios h3 {
   margin: 10px auto 10px auto;
+  text-transform: uppercase;
 }
 .servicios img {
   height: auto;
