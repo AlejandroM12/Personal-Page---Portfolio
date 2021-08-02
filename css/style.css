@@ -591,13 +591,21 @@ h3 {
 }
 
 .contact-form {
+  --form-ok-color: #4caf50;
+  --form-error-color:#f44336;
   max-width: 600px;
   margin: auto;
   padding: 0 10px;
   overflow: hidden;
 }
 
-.contact-form-text {
+.contact-form-response{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
+.contact-form .text {
   display: block;
   width: 100%;
   margin: 16px 0;
@@ -609,12 +617,12 @@ h3 {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-.contact-form-text:focus {
+.contact-form .text:focus {
   -webkit-box-shadow: 0 0 10px 4px #34495e;
           box-shadow: 0 0 10px 4px #34495e;
 }
 
-textarea.contact-form-text {
+textarea.contact-form .text {
   resize: none;
   height: 120px;
 }
@@ -628,11 +636,44 @@ textarea.contact-form-text {
   cursor: pointer;
   -webkit-transition: 0.5seg;
   transition: 0.5seg;
+  
 }
 .contact-form-btn:hover {
   background: #2e2e2e;
 }
-
+.contact-form [required]:valid{
+  border:thin solid var(--form-ok-color);
+}
+.contact-form [required]:invalid{
+  border:thin solid var(--form-error-color);
+}
+.contact-form-error{
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: var(--form-error-color);
+  color: #fff;
+  transition: all 800ms ease;
+}
+.contact-form-error.is-active{
+  display: block;
+  animation: show-mesage 1s 1 normal0s ease-out both;
+}
+.none{
+  display: none;
+}
+.contact-form-loader{
+  text-align: center;
+}
+@keyframes show-mesage{
+  0%{
+    visibility: hidden;
+    opacity: 0;
+  }
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
+}
 /* SOBRE MI*/
 .portada-sobremi {
   margin: 30px auto;
