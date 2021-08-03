@@ -773,6 +773,13 @@ textarea.contact-form .text {
   font-weight: bold;
   line-height: 1.618;
 }
+/*TECNOLOGIAS*/
+.tecnologias h2 {
+  margin: 40px auto;
+  width: 50%;
+  border: 1px solid #04009A;
+  border-radius: 8px;
+}
 
 /* CARD */
 .card {
